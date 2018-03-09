@@ -1,0 +1,113 @@
+<META http-equiv="Content-Style-Type" content="text/css">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<style>
+		* {
+			-webkit-touch-callout:none;
+			-webkit-user-select: none;  /* Chrome all / Safari all */
+			-moz-user-select: none;     /* Firefox all */
+			-ms-user-select: none;      /* IE 10+ */
+
+			<!-- /* No support for these yet, use at own risk */ -->
+			<!-- -o-user-select: none; -->
+			<!-- user-select: none; -->
+		}
+
+		
+		html, body {
+			overflow:hidden;
+		}
+
+		div.mainPanel {		
+			height:100%;
+			float:left;
+		}
+		
+		div.docPanel {
+			position:relative;
+			float:left;
+			width:100%;
+			height:100%;
+			overflow-y:scroll;
+		}
+		
+		div.docPage {
+			position:relative;
+			float:left;
+			border-width:0;
+			border-style:solid;
+			border-color:#F1F1EF;
+			border-right:none;			
+			border-bottom:none;
+			background-color:#F1F1EF;
+		}
+		
+		div.docOutline {
+			border-width:2;
+			border-style:solid;
+			border-color:#F1F1EF;
+		}
+		
+		div.hoverLayer {
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:2;
+			width:100%;
+			height:100%;
+		}
+		
+		div.hoverText {
+			position:absolute;
+			background-color:pink;
+			padding:1 4 1 4;
+			white-space:nowrap;
+			display:none;
+		}
+		
+		div.docTxt {
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:3;
+			width:100%;
+			height:100%;
+			opacity:0.1;
+		}
+		
+		div.wd {
+			position:absolute;
+		}
+		
+		img.pgImg {
+			z-index:1;
+			width:100%;
+		}
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="./viewer.js"></script>
+	<script src="./data.js"></script>
+</head>
+
+
+<body onLoad="onLoad()">
+	<div id="documentDiv" class="mainPanel" style="width:35%;">
+		<div id="docPanel" class="docPanel" style="background-color:#F1F1EF;">
+		</div>
+	</div>
+	<div id="modelDiv" class="mainPanel">
+		<div id="modelPanel" class="docPanel">
+			<div style="height:3000">
+				Hello World
+			</div>
+		</div>
+	</div>
+</body>
